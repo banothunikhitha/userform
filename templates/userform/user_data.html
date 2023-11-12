@@ -1,0 +1,30 @@
+<!-- userform/templates/userform/user_data.html -->
+{% extends 'base.html' %}
+
+{% block title %}User Data{% endblock %}
+
+{% block content %}
+    <h1>User Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Date of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in user_list %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.age }}</td>
+                    <td>{{ user.dob }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
